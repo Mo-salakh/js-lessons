@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson19</title>
+</head>
+<body>
+    <script>
+
+        let name = 'Solikh';
+
+        const age = 22;
+
+        if (age < 15) {'Доступ запрещен'} else {`Привет ${name}`}
+
+        function ViewMoney() {
+            console.log('Вот вам 10$');
+        }
+        ViewMoney()
+
+        function GetMoney(cash) {
+            return `Вот вам ${cash}$`
+        }
+        GetMoney(399)
+
+        console.log(GetMoney(399))
+
+        function kvadrat(num) {
+            console.log(num**3);
+        }
+        kvadrat(3)
+
+        function big(a,b,c) {
+            console.log(Math.max(a,b,c));
+        }
+        big(10,11,23)
+        
+        function discr(a,b,c) {
+           return b**2 - 4 * a * c 
+          
+        }
+
+        console.log(discr(3,5,8));
+
+
+function i(x, y){
+    if (x % 2 == 0 && y % 2 == 0){
+        return x*y;
+    }
+    else if (x % 2 != 0 && y % 2 != 0){
+        return +x + +y;
+    }
+    else{
+        if (x % 2 == 0){
+            return y;
+        }
+        else{
+            return x;
+        }
+    }
+}
+i(24,23)
+
+console.log(i);
+    
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

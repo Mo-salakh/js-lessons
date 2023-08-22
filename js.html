@@ -4,54 +4,317 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lesson19</title>
+    <title>Document</title>
 </head>
 <body>
+
+
+
     <script>
 
-        let name = 'Solikh';
+    // var старый способ для ввода переменной, полностью охватывает дом с комнатами
+    // constable постоянная "переменная" неизменяется и неповторяется const = 10;
+    // let переменная конкретная, охватывает конкретную комнату, let a = 40; a = a * 10 . console.log(a) будет равно = 400
+    // + - * /
 
-        const age = 22;
+        //boolem
 
-        if (age < 15) {'Доступ запрещен'} else {`Привет ${name}`}
+        //true=1 false=0
 
-        function ViewMoney() {
-            console.log('Вот вам 10$');
-        }
-        ViewMoney()
+        // Операторы сравнения = < > << >> =< >=
 
-        function GetMoney(cash) {
-            return `Вот вам ${cash}$`
-        }
-        GetMoney(399)
+        // let a = 10;
+        // let b = 20;
 
-        console.log(GetMoney(399))
+        // let c = 20 > 10;
+        // console.log(c) // ответ = true
 
-        function kvadrat(num) {
-            console.log(num**3);
-        }
-        kvadrat(3)
+        // чтобы сравнить переменные надо написать два == и даже 3 равно === чтобы полностью сравнять переменные со своими свойствами
 
-        function big(a,b,c) {
-            console.log(Math.max(a,b,c));
-        }
-        big(10,11,23)
-        
-        function discr(a,b,c) {
-           return b**2 - 4 * a * c 
-          
-        }
+        // Math.max(a,b) переменная матс имеет множиство параметров, в данном примере он выделяет из переменных в скобках самую большую сумму.
 
-        console.log(discr(3,5,8));
+        //-390
+        // let c = 15 * ((4 + 25) - 55);
 
-    
+        // console.log(c);
+
+        // let a = 1 ;
+        // let b = 5 ;
+        // let c = 'Серых волков'
+
+        // let d = a + (b + c)
+
+        // console.log(d)
+
+        // i++ Добавляет один шаг, то есть еденицу и используется в циклах
+        // i-- -1
+
+        // let name = 'Mukhammad Solikh';
+        // let age = 22;
+        // let city = 'Grozny';
+
+        // console.log(`Меня зовут ${name} мне ${age} я из ${city}`)
+
+        // alert(name) алерт выводит модальное окно и показывает свойства переменной внутри скобки
+
+        // let $ = 1;
+        // let rub = 97;
+
+        // console.log($ / rub)
+
+        // let name = prompt('Как вас зовут?', '');
+
+        // console.log('Привет ' + name)
+
+        // console.log('Start')
+
+        // if(10 < 11) {
+        //     console.log('Right')
+        // } else {
+        //     console.log(Correct)
+        // }
+
+        // console.log('End')
+
+        // let login = 'Salamov007';
+        // let password = 120596;
+
+        // let loginUser = prompt('Write youre login please...')
+        // let passwordUser = prompt('Password?')
+
+        // // if(login == loginUser) {
+        // //     if(password == passwordUser)
+        // //     {console.log('Welcome')} else {console.log('Error password')}
+        // // } else {console.log('Error date')}
+
+        // if (login == loginUser && password == passwordUser)
+        // {console.log('Welcome')} else {console.log(Error)}
+
+        // let a = 'Mercedes';
+
+        // switch(a) {
+        //     case 'Bmw' : console.log('Welcome M'); break;
+        //     case 'Lamborgini' : console.log('Welcomentanto'); break;
+        //     case 'Mercedes' : console.log('Assalamu Alaykum Akhi'); break;
+        // } // Он делает тоже что и иф и елсе. case - типа иф, бреак закрывает вариант.
+
+        // let text = 'Lorem'
+
+        // console.log(text.length) // смотрить сколько букв в слове
+
+        // function f(x) {
+
+        //     console.log(x)
+        // }
+
+        // f(5)
+        // функция не работает до тех пор пока не написать ее, и нет разницы написать f до функции или после
+        // функция function может забрать из глобальной видимости, в отличии от других функций
 
 
 
+        // Надо учитывать какие переменные должны быть в общей (глобальной) области а какие в узкой области (как в переменных функшион)
+
+        // function f(x,y) {
+        //     console.log(x/y + '$')
+        // }
+
+        // f(25000,99)
+
+        // function f(x) {
+        //     return x * x
+        // }
+        // f(10) // итог: сама переменная функтция функшион превращается в 10 то есть в ответ функции и даьлше не действует
+
+        // let i = 0;
+        // while (i < 3) { // выводит 0, затем 1, затем 2
+        //     console. log( i);
+        //     i++;
+        // }
+
+        // let i = 0;
+        // do {
+        //     console. log( i ); //Сперва выполняет свою работу несмотря на условие, которое снизу, потом идет вниз вайл ( ай меньше трех), потом смотрит вверх и решает то, что внизу
+        //     i++;
+        // } while (i ‹ 3);
+
+        // также можно написать переменные сразу в одном месте соблюдая порадядок и сортировку как в примере выше:
+
+        // for(i = 0; i < 3; i++) {
+        //     console.log(i)
+        // }
+
+        // также можно убрать среди чисел i четные или нечетные числа например:
+
+        // for (i = 0; i < 20; i++) {
+        //     тут пишем код
+        //     if (i % делится на 2 и получается равно = 0;) continue
+        //     console.log(i)
+        // }
+
+        // как сделать блок в жава-скрипте?
+        // мы сперва создаем переменную let потом даем ей название, и ставим волнистые скобки после знака равно и там у нас образуется блок, в этом блоке мы пишем свойсва например:
+
+        // let company= {
+        //     name: 'Dedoox',
+        //     staff: 20,
+        //     owner: 'Salakh',
+
+        // }
+        // // как можно изменить значение свойств блока компани не заходя во внутрь самого блока?, пишем название блока и через точку само свойство и пишем += кол-во, которое мы хотим добавить :
+
+        // company.staff += 10
+        // // Как можно обратиться к определенному свойству переменной company? Мы просто пишем само свойство рядом с переменной в консоль-лог через точку:
+        // console.log(company)
+
+        // let company = {
+        //     name: 'Expo',
+        //     staff: 10,
+        //     owner: 'Magomed'
+        //     teach: function (){
+        //         console. log (this.name = 'ExpoVVV') //когда мы хотим обратиться в дочерних свойствах к свойству из родительского свойства то мы пишем this чтобы конкретно определить родителя
+        //     },
+        //     adress: {
+        //         city: 'Grozny',
+        //         number: '89280044043',
+        //         street: 'Benoytsa 39'
+        //     },
 
 
+        // }
 
+        // if = ? , else = : !!!
 
+        // let name = 'Salakh';
+        // let age = 22;
+        //
+        // if(age > 15) {console.log(alert(`Добро пожаловать ${name}`))} else {alert('Доступ запрещен')}
+        //
+        // function ViewMoney(x) {
+        //     console.log(x)
+        //     return x
+        // }
+        // ViewMoney('Вот вам 10$')
+        //
+        // function GetMoney(ViewMoney) {
+        //     console.log(GetMoney)
+        // }
+        // GetMoney()
+
+        let obj= {
+          name: 'Solikh',
+          age: 22,
+          'one two': 'Js'
+        } //Так пишется объект, и он отличается он массива тем, что для него можно создавать ключи и у него есть собственные
+
+        console.log(obj);
+
+        // let array = [ 'html', 'css', 'react', 'js', 1000] //для массива используются квадратные скобки 
+
+        // console.log(array[array.length - 1]); //мы отнимаем еденицу, потому что массив начинает отчет с 0, а функция length считает с 1, и поэтому надо отнимать еденицу.
+
+        // console.log(array);
+
+//         let array = [
+//         {
+//     "userId": 1,
+//     "id": 1,
+//     "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+//     "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+//   },
+//   {
+//     "userId": 1,
+//     "id": 2,
+//     "title": "qui est esse",
+//     "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+//   },
+//   {
+//     "userId": 1,
+//     "id": 3,
+//     "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+//     "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+//   },
+//         ]
+
+//         console.log(array[1].title); //сперва мы обратились к первому объекту массива, так как ключи массива сортируются по номерации, потом через точку мы обращаемся к ключам.
+
+        // let array = [ 'html', 'css', 'c++', 'react']
+
+        // // у масива много методов, одним из таких методов яв-ся push который добавляет свое значение в конце масива создавая для него доп. число
+        // array.push('js')
+
+        // // чтобы удалить последний элемент из масива пишем array.pop()
+
+        // array.pop()
+
+        // //чтобы добавить элемент вначале масива пишем array.unshift()
+
+        // array.unshift('first one')
+
+        // //чтобы удалить элемент из масива пишем метод array.splice(2, 2) первая цифра определяет нумерацию с которого начнется удаление, а вторая кол-во элементов которых нужно удалить
+
+        // let array = [12, 145, 5432, 7654, 1345, 0987];
+
+        // array.forEach(function(item, index, array) // item-само содержание масива, index-место в котором хранится элемент масива (нумерация), array- выводит в фанкшене сам масив полностью стоько раз сколько срабатывает foreach
+
+        // {
+        //     console.log(item, 'ind: ' + index, + )
+        // })
+
+        let masive = [ {
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+  },
+]
+//   чтобы вывести конкретное значение из масива надо обратиться через фанкшион через метод ForEach, следующим образом: 
+
+    masive.forEach(function(item){
+        console.log(item.body);
+    })
+
+    // let arr = [13, 22, 3, 5, 6, 8, 43, 93]
+
+    // let arr2 = arr.filter(function(item, index, array){
+    //     if(item > 8) {return true}
+    // })
+    // //arr.filter делает новый массив из полученного фильтром ответа и кладет ответ в масив или объект в котором он написан
+    // console.log(arr2);
+
+    // let blk = ['text', 'smext', 'html', 'css',]
+
+    // let blk1 = blk.filter(function(item){
+    //     if(item.length) {return true}
+    // })
+    // console.log(blk1);
+
+    // console.log(blk1.);
+
+    // есть у масива метод map который добавляет значение в уже созданый масив а ответом становиться сам масив перенося данные первого масива с добавлением изменений
+
+    // let cdek = [1, 3, 5, 7, 9]
+    // console.log(cdek);
+    // let cdek1 = cdek.map(function(item){
+    //     return item + 1
+    // })
+    // console.log(cdek1);
+
+    // фильтр не меняет у нас масив а лишь фильтрует и выводит ответ в заданное место, а мап меняет масив
+
+    let afk = [13, 42, 5354, 124, 524]
+
+    let online = afk.reduce(function(sum, item, index, array){
+        return sum + item
+    }, 0)/*Значение сама*/ /* можно добавить в фанкшине 4 значения где первое значение sum что означает сумма*/ 
+
+    console.log(online);
     </script>
 </body>
 </html>
