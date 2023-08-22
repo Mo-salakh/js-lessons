@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+        // ​​forEach
+        // ​​ Дан массив с числами [10, 2762, 0.42, 192, 3, 28, 1125, 2018, 34, 66, 100]. Вывести в консоль только нечетные числа.
+
+        let arr = [10, 2762, 0.42, 192, 3, 28, 1125, 2018, 34, 66, 100]
+
+        console.log(arr);
+
+        arr.forEach(function(item){
+           if (item % 2  !== 0) {console.log(item);}
+        })
+
+        //​​Дан массив со строчными элементами [ “lorem ipsum”, “javascript”, “php”, “css”, “react”, “git”, “html”, “mysql”].
+        //  Вывести в консоль элементы у которых кол-во символов не больше 4-х. 
+
+        let arr1 = [ 'lorem ipsum', 'javascript', 'php', 'css', 'react', 'git', 'html', 'mysql']
+
+        arr1.forEach(function(item){
+            if(item.length > 4) {console.log(item);}
+        })
+
+
+        //         ​​filter
+        // ​​ 1.  Дан массив [1, -3, 5, 6, -7, 8, 9, -11]. Создайте новый массив в котором останутся только отрицательные элементы. 
+
+        let arr2 = [1, -3, 5, 6, -7, 8, 9, -11]
+        
+        arrFilter = arr2.filter(function(item){
+            if(item < 0) {return item}
+        })
+        console.log(arrFilter);
+
+
+        // Дан массив [10, 2762, 0.42, 192, 3, 28, 1125, 2018, 34, 66, 100]. 
+        // Создать новый в котором будут только четные элементы этого массива. (Нужен оператор остаток от деления - %). 
+
+        let arr3 = [10, 2762, 0.42, 192, 3, 28, 1125, 2018, 34, 66, 100]
+        
+        arr3Filter = arr3.filter(function(item){
+            if(item % 2 == 0) {return item}
+        })
+
+        console.log(arr3Filter);
+
+
+        // Дан массив [ “lorem ipsum”, “javascript”, “php”, “css”, “react”, “git”, “html”, “mysql”] 
+        // создать новый массив состоящий только из элементов у которых длина строки не равна 3-м. 
+
+        let arr4 =  ["Lorem ipsut", "javascript", "php", "css", "react", "git", "html", "mysql"]
+
+        arr4Filter = arr4.filter(function(item){
+            if(item.length !== 3) { return item}
+        })
+
+        console.log(arr4Filter);
+
+
+        //​​Дан массив [5, 6, 7, 8, 9], сделайте из него массив состоящий из квадратов этих числе. (25, 36.. и тд)
+
+        let arr5 = [5, 6, 7, 8, 9]
+
+        arr5Map = arr5.map(function(item){
+            
+        })
+
+
+
+
+
+
+
+
+        
+
+    
+
+
+
+
+
+
+    </script>
+</body>
+</html>
