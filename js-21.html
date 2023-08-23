@@ -72,21 +72,56 @@
         let arr5 = [5, 6, 7, 8, 9]
 
         arr5Map = arr5.map(function(item){
-            
+          return  item ** 2 
+        })
+        console.log(arr5Map);
+
+
+        // ​​Дан массив с объектами [{а: 10, b: 5}, {а: 20, b: 22}, {a: 131, b:55}]. 
+        // Создать новый массив элементами которого буду сумма свойств объекта. Должно получится [15, 42, 186]
+
+        let arr6 = [{a: 10, b: 5}, {a: 20, b: 22}, {a: 131, b:55}]
+
+        let arr6Map = arr6.map(function(item){
+            return item.a + item.b
+        })
+        console.log(arr6Map);
+
+        //​​Дан массив [-13, 0, 12, 1662, -0.32, -102, -2]. Посчитать сумму отрицательных элементов. (Нужно будет использовать filter и reduce)
+
+        let arr7 = [-13, 0, 12, 1662, -0.32, -102, -2]
+
+        arr7F = arr7.filter(function(item){
+            if(item < -0 ) return item
+        },0)
+
+        console.log(arr7F);
+
+        arr7R = arr7F.reduce(function(sum, item, index, array){
+           return sum += item
+        }, 0)
+
+        console.log(arr7R);
+
+
+//         (Нужно будет использовать filter и reduce)
+// ​         ​Дан массив с объектами [ {x: 10, y: “lorem”}, {x: 21, y: “lorem”}, {x: -17, y: “lorem”}, {x: 156, y: “lorem”}]; посчитать сумму свойств х всех объектов.
+
+        let arr8 = [ {x:10, y:"lorem"}, {x: -17, y:"lorem"}, {x:156, y:"lorem"} ]
+
+        arr8F = arr8.filter(function(item){
+            return item.x, delete item.y
         })
 
+        console.log(arr8F);
 
+        arr8R = arr8F.reduce(function(sum, item, index , array){
+            return item.x + sum
+        }, 0)
 
-
-
-
-
+        console.log(arr8R);
 
         
-
-    
-
-
 
 
 
