@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ls-24</title>
+</head>
+<body>
+    
+
+    <ul id="ul">
+        <li>lorem1</li>
+        <li>lorem2</li>
+        <li>lorem3</li>
+    </ul>
+
+
+
+
+
+    <script>
+
+        //  children - псевдомасив, выводит все дочерные элементы
+        //  firstChild - подобен вышему
+        //  lastChild - подобен первому
+        //  previousSibling - предыдущий соседний элемент
+        //  nextSibling - следующий сосед
+        //  parent
+
+        console.log(document.head.firstChild.nextSibling);
+
+        console.log(document.head.lastElementChild);
+
+        console.log(document.body.firstElementChild.firstElementChild.nextElementSibling);
+
+        //Как обратиться к айди в жава скрипте
+
+        //1 добавляем айди к узлу
+        
+        //2 делаем так :
+
+        //первый вариант
+        console.log(document.getElementById('ul'));
+
+        //второй вариант
+        let ul = document.getElementById('ul')
+
+
+
+
+    </script>
+
+    <!-- теги которые есть в аштимэл странице называются узлами -->
+</body>
+</html>
