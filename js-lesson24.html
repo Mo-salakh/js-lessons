@@ -9,17 +9,85 @@
 <body>
     
 
-    <ul id="ul">
-        <li>lorem1</li>
-        <li>lorem2</li>
-        <li>lorem3</li>
-    </ul>
-
-
+    <div class="js">
+        <ol class="list">
+            <li>querySelector</li>
+            <li>querySelectorAll</li>
+            <li>querySelectorAll</li>
+        </ol>
+        <p>firstChild</p>
+        <h1>last child</h1>
+        <div id="Element">
+            <h1 class="Found-me">Get Element By Id</h1>
+        </div>
+    </div>
 
 
 
     <script>
+
+        // ДЛЯ ОБЩЕГО ПОИСКА - querlySelectorAll
+        const js = document.querySelectorAll('.js') // находит из всего бади класс js, если мы хотим найти айди или класс то обязательно поставить точку перед словом
+
+        const div = document.querySelectorAll('p') // а если хотим найти тег, то пишем название тега без точки вначале
+        // ДЛЯ ОБЩЕГО ПОИСКА (Выводит только первый попавшийся)
+        const FirstFound = document.querySelector('li') // Если написать просто querySelector без all то он возьмет первый попавшийся узел из указанного
+
+        // ПРИМЕЧАНИЕ!! Если поиск узлов осушествляется обобщенными способами, то надо ставить соответствующие знаки перед значениями как . перед классами и # перед айди
+        // а если же поиск осуществляется непосредственно через специальные методы то не стоит ставить точки или же рещетки
+
+        // ДЛЯ ПОИСКА АЙДИ - getElementById
+        const ElementId = document.getElementById('Element'); 
+        console.log(ElementId);
+
+        //ДЛЯ ПОИСКА КЛАССА - getElementByClassName
+
+        const classFounder = document.getElementsByClassName('Found-me')
+        console.log(classFounder);
+
+        // ДЛЯ ПОИСКА ТЕГА - getElementsByTagName (выводит коллекцию всех найденых тегов)
+        const TegFounder = document.getElementsByTagName('li')
+        console.log(TegFounder);
+        
+
+
+
+        console.log(document.body.firstElementChild); // Добрались до дива с классом класс
+        console.log(document.body.childNodes[1]); // Добрались до дива с классом класс
+        console.log(document.body.children[0]); // Добрались до дива с классом класс 
+
+        console.log(document.body.firstElementChild.children[1]); // h1 
+        console.log(document.body.firstElementChild.childNodes[1]); p 
+
+        const docElement = document.documentElement // All html
+        const docHead = document.head // only head
+        const docBody = document.body // only body
+
+        //childnodes - выводит все элементы узла в виде коллекции
+        const Childnodes = document.body.childNodes;
+        console.log(Childnodes);
+
+        // hasChildNodes()  - чтобы узнать есть ли у узла дочерние элементы
+        console.log(document.body.hasChildNodes());
+
+        const previousSiblingNode = docBody.previousSibling;
+        console.log(previousSiblingNode);
+        console.log(document.body.childNodes.filter); // undefined (у коллекции нет метода filter!)
+
+        // родителем <body> является <html>
+        alert( document.body.parentNode === document.documentElement ); // выведет true
+
+        // после <head> идёт <body>
+        alert( document.head.nextSibling ); // HTMLBodyElement
+        
+        // перед <body> находится <head>
+        alert( document.body.previousSibling ); // HTMLHeadElement
+
+
+
+
+
+
 
         //  children - псевдомасив, выводит все дочерные элементы
         //  firstChild - подобен вышему
@@ -46,7 +114,33 @@
         //второй вариант
         let ul = document.getElementById('ul')
 
+        ul.append('appChild firstly')
+        ul.prepend('prepChild in end')
+        ul.before('Before tag Ul')
+        ul.after('After tag ul')
 
+        // чтобы посмотреть на функционал документа или виндова и тд то пишем console.dir(document) и тд
+
+        // создать узел можно через document.createElement('li')
+
+        let li = document.createElement('li')
+
+        ul.append(li)
+        ul.append(li)
+
+        //чтобы добавить класс к узлу пишем classList.add('')
+        // чтобы удалить класс из узла пишем classList.remove('')
+
+        ul.classList.add('ulClass')
+        ul.classList.remove('ulClass')
+
+        // для проверки наличии классов в каком либо узле пишем ul.classList.contains('name of class')
+
+        ul.classList.contains('ulClass')
+
+        // Также у classList есть свойство, которое добавляет (если нет) класс, а если класс присутвтсвует, то удаляет его
+
+        ul.classList.toggle('Present')
 
 
     </script>
