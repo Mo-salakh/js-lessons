@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click better</title>
+
+    <style>
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+        #mainHeader {
+            display: flex;
+            flex-direction: column;
+            margin: 80px 0;
+        }
+
+        #main {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            background: url(https://cdn.britannica.com/40/94540-050-789B2064/Palm-trees-skyline-Los-Angeles-background.jpg) no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        #mainTitle {
+            position: absolute;
+            bottom:0;
+            font-size: 30px;
+            padding: 80px 60px;
+            opacity: .5;
+            color: #111;
+            background-color: #fafafa;
+
+        }
+
+        .SecondItems {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+
+        .item_img img {
+            width: 300px;
+            height: 150px;
+            padding: 0 20px;
+        }
+
+        .item_title {
+            padding: 0 20px;
+            font-size: 20px;
+            opacity: .8;
+            color: #111;
+        }
+        img {
+            width:100%;
+        }
+
+        .activeAll {
+            border: 3px black solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div id="mainHeader">
+            <div id="main">
+                <div id="mainTitle">
+                    <p>Лос-Анджелес – огромный город на юге Калифорнии, столица американской киноиндустрии и телевидения. Район Голливуд, название которого выложено на холме огромными буквами, приобрел всемирную известность благодаря киностудиям "Парамаунт Пикчерз", "Юниверсал" и "Уорнэр Бразэрс". </p>
+                </div>
+            </div>
+
+        </div>
+    
+        <div class="SecondItems container">
+    
+            <div id="Item-1">
+                <div class="item_img">
+                    <img src="https://cdn.britannica.com/40/94540-050-789B2064/Palm-trees-skyline-Los-Angeles-background.jpg" alt="Los angeles">
+                </div>
+                <div class="item_title">
+                    <p>Лос-Анджелес – огромный город на юге Калифорнии, столица американской киноиндустрии и телевидения. Район Голливуд, название которого выложено на холме огромными буквами, приобрел всемирную известность благодаря киностудиям "Парамаунт Пикчерз", "Юниверсал" и "Уорнэр Бразэрс"</p>
+                </div>
+            </div>
+    
+    
+            <div id="Item-2">
+                <div class="item_img">
+                    <img src="https://www.arabianbusiness.com/cloud/2023/01/04/dubai-real-estate.jpg" alt="Dubai">
+                </div>
+                <div class="item_title">
+                    <p>Дубай – город и эмират на побережье Персидского залива в Объединенных Арабских Эмиратах, который славится своими роскошными магазинами, ультрасовременной архитектурой, ресторанами и ночными клубами. Силуэт города формируют бесчисленные небоскребы, в том числе Бурдж-Халифа высотой 830 метров.</p>
+                </div>
+            </div>
+    
+            <div id="Item-3">
+                <div class="item_img">
+                    <img src="https://noticiassalamanca.com/wp-content/uploads/2023/01/singapur.jpg" alt="Singapur">
+                </div>
+                <div class="item_title">
+                    <p>Сингапур – многонациональный город-государство, мировой финансовый центр. Он расположен на острове и граничит с южной частью Малайзии. Сердцем колониального центра города является поле для крикета Паданг, созданное в 1830-е годы.</p>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    <script>
+
+        let main = document.querySelector('#main')
+        let item1 = document.querySelector('#Item-1')
+        let item2 = document.querySelector('#Item-2')
+        let item3 = document.querySelector('#Item-3')
+
+        item1.onclick = active
+        item2.onclick = active
+        item3.onclick = active
+
+        item1.addEventListener('click', selectedCity)
+        item2.addEventListener('click', selectedCity)
+        item3.addEventListener('click', selectedCity)
+
+        function active(){
+            item1.classList.remove('activeAll')
+            item2.classList.remove('activeAll')
+            item3.classList.remove('activeAll')
+            this.classList.add('activeAll')
+        }
+
+        function selectedCity(){
+           let src = this.firstElementChild.firstElementChild.src
+           let text = this.lastElementChild.innerText
+
+           main.style.backgroundImage = `url(${src})`;
+           main.firstElementChild.innerText = text
+        }
+
+
+
+        
+
+    </script>
+</body>
+</html>
